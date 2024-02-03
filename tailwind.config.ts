@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { screens } = require('tailwindcss/defaultTheme')
 
 const config: Config = {
   content: [
@@ -7,6 +8,14 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xxs: '320px',
+      xs: '480px',
+      sm: screens.sm,
+      md: screens.md,
+      lg: screens.lg,
+      xl: screens.xl,
+  },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
